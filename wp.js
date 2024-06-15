@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (navigator.canShare({ files: [file] })) {
                     try {
                         await navigator.share({
-                            files: [file],
+                            files: fileInput.files,
                             title: 'Web Share API Demo',
                             text: 'Here is a file for you!',
                         });
